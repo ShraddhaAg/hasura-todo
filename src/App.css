@@ -1,0 +1,80 @@
+.App {
+  text-align: center;
+  font-family: 'Perpetua';
+  background-color: white;
+  color: black;
+}
+
+.title-home {
+  margin-top: 10%;
+  font-size: 75px;
+  font-weight: 700;
+}
+
+.navbar {
+  border: 0;
+  background-color: transparent;
+  color: black;
+}
+
+.title {
+  font-weight: 400;
+  font-size: 45px;
+}
+
+.todos {
+  height: 75px;
+  border: 1px solid grey;
+  line-height: 75px;
+  text-align: center;
+}
+
+.todos:hover {
+  cursor: pointer;
+}
+
+.todo-list, .todo-list-completed {
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 2em;
+}
+
+.todo-list-completed h3 {
+  text-decoration: line-through;
+}
+
+.inp-todo {
+  margin-top: 3em;
+  text-align: center;
+  border: 1px solid grey;
+  background-color: transparent;
+  color: black;
+}
+
+.container {
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.inp-todo {
+  height: 50px;
+  font-weight: 400;
+  font-size: 17px
+}
+
+.cross {
+  color: black;
+  font-size: 20px;
+  float: right;
+  position: relative;
+  margin-left: 3em;
+  margin-top: 0.2em;
+}
+
+.cross:hover {
+  cursor: pointer;
+}
+
+.todo-loader {
+  margin-top: 5em;
+}
