@@ -13,7 +13,7 @@ class Callback extends Component {
       bottom: 0,
       left: 0,
       right: 0,
-      backgroundColor: 'black',
+      backgroundColor: '#1f2430',
     }
 
     return (

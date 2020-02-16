@@ -27,7 +27,8 @@ Make a new file under `src/` named `env.js`
 
 ```
 export const vars = {
-    "GRAPHQL_ENDPOINT": '<YOUR_GRAPHQL_ENDPOINT>',
+    "GRAPHQL_ENDPOINT": 'https://<YOUR_GRAPHQL_ENDPOINT>',
+    "GRAOHQL_REALTIME_ENDPOINT": 'wss://<YOUR_GRAPHQL_ENDPOINT>',
     "DOMAIN": "<YOUR_AUTH0_DOMAIN>"
     "CLIENT_ID": "YOUR_CLIENT_ID_FOR_AUTH0",
     "CALLBACK_URL": "YOUR_CALLBACK_URL"

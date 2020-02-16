@@ -1,6 +1,6 @@
 .App {
   font-family: 'Perpetua';
-  background-color: black;
+  background-color:#1f2430;
   color: white;
 }
 
@@ -13,20 +13,13 @@
 .navbar {
   border: 0;
   background-color: transparent;
-  color: black;
+  color: #1f2430;
 }
 
 .title {
   font-weight: 400;
   font-size: 45px;
 }
-
-/* .todos {
-  height: 75px;
-  border: 1px solid grey;
-  line-height: 75px;
-  text-align: center;
-} */
 
 .todos:hover {
   cursor: pointer;
@@ -42,23 +35,10 @@
   text-decoration: line-through;
 }
 
-/* .inp-todo {
-  margin-top: 3em;
-  border-bottom: 1px solid grey;
-  background-color: transparent;
-  color: white;
-} */
-
 .container {
   overflow-y: scroll;
   overflow-x: hidden;
 }
-/* 
-.inp-todo {
-  height: 50px;
-  font-weight: 400;
-  font-size: 17px
-} */
 
 .cross {
   color: white;
@@ -94,5 +74,15 @@
 }
 
 .get-shit-done {
+  color: white;
+}
+
+.login-logout{
+    background-color: transparent;
+    color: white;
+
+}
+
+.login-logout:hover{
   color: white;
 }

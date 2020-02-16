@@ -18,7 +18,7 @@ class App extends Component {
     const { isAuthenticated } = this.props.auth;
     return (
       <div className="App container">
-        <nav className="navbar navbar-default">
+        <nav className="navbar">
           <div className="container-fluid">
             <div className="navbar-header">
               <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -30,25 +30,18 @@ class App extends Component {
               <a className="get-shit-done navbar-brand" href="">Get Sh*t Done!</a>
             </div>
 
-            <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <div className="collapse.navbar-collapse" id="bs-example-navbar-collapse-1">
               <ul className="nav navbar-nav navbar-right">
                 {
                   isAuthenticated() && (
-                      <li style={{ marginTop: '3%' }}>
-                        Welcome Back!
-                      </li>
-                    )
-                }
-                {
-                  isAuthenticated() && (
                       <li>
-                        <button className="btn btn-default" onClick={this.logout.bind(this)}>Logout</button>
+                        <button className="btn navbar-brand login-logout" onClick={this.logout.bind(this)}>Logout</button>
                       </li>
                     )
                 }
                 {
                   !isAuthenticated() && (
-                      <button className="btn btn-default" onClick={this.login.bind(this)} style={{ marginTop: '5%' }}>Login</button>
+                      <button className="btn navbar-brand login-logout" onClick={this.login.bind(this)} style={{ marginTop: '5%' }}>Login</button>
                     )
                 }
               </ul>
