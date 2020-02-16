@@ -1,8 +1,7 @@
 .App {
-  text-align: center;
   font-family: 'Perpetua';
-  background-color: white;
-  color: black;
+  background-color: black;
+  color: white;
 }
 
 .title-home {
@@ -22,48 +21,47 @@
   font-size: 45px;
 }
 
-.todos {
+/* .todos {
   height: 75px;
   border: 1px solid grey;
   line-height: 75px;
   text-align: center;
-}
+} */
 
 .todos:hover {
   cursor: pointer;
 }
 
-.todo-list, .todo-list-completed {
+ .todo-list {
   text-align: center;
   margin: 0 auto;
   margin-top: 2em;
-}
+} 
 
-.todo-list-completed h3 {
+.todo-list-completed p {
   text-decoration: line-through;
 }
 
-.inp-todo {
+/* .inp-todo {
   margin-top: 3em;
-  text-align: center;
-  border: 1px solid grey;
+  border-bottom: 1px solid grey;
   background-color: transparent;
-  color: black;
-}
+  color: white;
+} */
 
 .container {
   overflow-y: scroll;
   overflow-x: hidden;
 }
-
+/* 
 .inp-todo {
   height: 50px;
   font-weight: 400;
   font-size: 17px
-}
+} */
 
 .cross {
-  color: black;
+  color: white;
   font-size: 20px;
   float: right;
   position: relative;
@@ -77,4 +75,24 @@
 
 .todo-loader {
   margin-top: 5em;
+}
+
+.inp-todo {
+  width: 100%;
+  color: white;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px white solid;
+}
+
+.todos {
+  background-color: transparent;
+  color: white;
+  border: none;
+  border-bottom: 1px white solid;
+  font-size: medium;
+}
+
+.get-shit-done {
+  color: white;
 }

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import loading from './loading.svg';
+import loader from '../assets/oval.svg';
 
 class Callback extends Component {
   render() {
@@ -13,12 +13,12 @@ class Callback extends Component {
       bottom: 0,
       left: 0,
       right: 0,
-      backgroundColor: 'white',
+      backgroundColor: 'black',
     }
 
     return (
       <div style={style}>
-        <img src={loading} alt="loading"/>
+        <img src={loader} alt="loading"/>
       </div>
     );
   }

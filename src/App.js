@@ -17,7 +17,7 @@ class App extends Component {
   render() {
     const { isAuthenticated } = this.props.auth;
     return (
-      <div className="App container-fluid">
+      <div className="App container">
         <nav className="navbar navbar-default">
           <div className="container-fluid">
             <div className="navbar-header">
@@ -27,7 +27,7 @@ class App extends Component {
                 <span className="icon-bar"></span>
                 <span className="icon-bar"></span>
               </button>
-              <a className="navbar-brand" href="#">Get Sh*t Done!</a>
+              <a className="get-shit-done navbar-brand" href="">Get Sh*t Done!</a>
             </div>
 
             <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">

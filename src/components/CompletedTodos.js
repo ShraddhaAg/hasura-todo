@@ -1,13 +1,11 @@
-import React, { Component } from 'react';
-import { Query } from "react-apollo";
-import gql from "graphql-tag";
+import React from 'react';
+import { Subscription } from "react-apollo";
 import Todo from './Todo';
-import { getCompletedQuery } from '../queries/Queries';
+import { getCompletedTodos } from '../queries/Queries';
 import '../App.css';
-import TodoLoader from '../Loaders/TodoLoader';
 
 const Todos = () => (
-  <Query query={getCompletedQuery}>
+  <Subscription subscription={getCompletedTodos}>
   {
     ({ loading, error, data }) => {
       if(loading)
@@ -22,7 +20,7 @@ const Todos = () => (
       ))
     }
   }
-  </Query>
+  </Subscription>
 );
 
 export default Todos;

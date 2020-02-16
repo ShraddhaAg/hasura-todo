@@ -110,4 +110,4 @@ dist
 env.js
 
 # Ignore builf files
-build/*
+build/

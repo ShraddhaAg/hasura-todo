@@ -1,19 +1,5 @@
 import gql from "graphql-tag";
 
-export const FetchAllQuery = gql`
-  {
-    todos (
-      where: { completed: { _eq: false }},
-      order_by: {id: desc}
-    ) {
-      id
-      todo_name
-      completed
-      user_id
-    }
-  }
-`;
-
 export const AddTodoQuery = gql`
   mutation addTodo($todo_name: String!, $user_id: String!) {
     insert_todos(objects: [
@@ -44,8 +30,8 @@ export const MarkCompletedQuery = gql`
   }
 `;
 
-export const getCompletedQuery = gql`
-  {
+export const getCompletedTodos = gql`
+  subscription getCompletedTodos {
     todos(
       where: { completed: {_eq: true }},
       order_by: {id: desc}
@@ -67,3 +53,14 @@ export const deleteQuery = gql`
     }
   }
 `;
+
+export const FetchAllTodos = gql`
+subscription FetchAllTodos {
+  todos(where: {completed: {_eq: false}}, order_by: {id: desc}) {
+    id
+    todo_name
+    user_id
+    completed
+  }
+}
+`;  
