@@ -63,6 +63,8 @@ As a final step, head over to the application settings on Heroku and set *Config
 
 `HASURA_GRAPHQL_ADMIN_SECRET` : <YOUR_SECRET>
 `HASURA_GRAPHQL_JWT_SECRET`: Generate the value from [here](https://hasura.io/jwt-config).
+`HASURA_GRAPHQL_LIVE_QUERIES_MULTIPLEXED_REFETCH_INTERVAL`: By default updates are delivered to clients every 1 sec (1000), you can set this value as per your requirement. Read more about it [here](https://docs.hasura.io/1.0/graphql/manual/subscriptions/index.html#execution).
+
 
 ### Auth0 configurations
 
