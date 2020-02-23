@@ -5,9 +5,6 @@ import { MarkCompletedQuery, deleteQuery } from '../queries/Queries';
 import '../App.css';
 
 class Todo extends Component {
-  constructor(props) {
-    super(props);
-  }
 
   completedTask(id, mark, e) {
     $("#" + id + " p").css({ 'text-decoration': 'line-through'});
@@ -27,12 +24,19 @@ class Todo extends Component {
       <Mutation mutation={MarkCompletedQuery}>
         {
           (mark, { data }) => (
-            <div className="todos list-group-item" onClick={this.completedTask.bind(this, this.props.data.id, mark)} id={this.props.data.id}>
+            <div 
+            className={this.props.data.completed ? "todos list-group-item todo-list-completed": "todos list-group-item"} 
+            onClick={this.completedTask.bind(this, this.props.data.id, mark)} 
+            id={this.props.data.id}>
               <Mutation mutation={deleteQuery}>
                 {
                   (del, { data1 }) => (
                     <div>
-                      <i className="fas fa-times-circle cross" data-toggle="tooltip" data-placement="top" title="click to delete" onClick={this.deleteTodo.bind(this, this.props.data.id, del)}></i>
+                      <i className="fas fa-times-circle cross" 
+                      data-toggle="tooltip" 
+                      data-placement="top" 
+                      title="Click to delete" 
+                      onClick={this.deleteTodo.bind(this, this.props.data.id, del)}></i>
                       <p>{`${this.props.data.todo_name}`}</p>
                     </div>
                   )

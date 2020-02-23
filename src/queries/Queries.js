@@ -30,20 +30,6 @@ export const MarkCompletedQuery = gql`
   }
 `;
 
-export const getCompletedTodos = gql`
-  subscription getCompletedTodos {
-    todos(
-      where: { completed: {_eq: true }},
-      order_by: {id: desc}
-    ) {
-      id
-      todo_name
-      completed
-      user_id
-    }
-  }
-`;
-
 export const deleteQuery = gql`
   mutation del($id: Int!) {
     delete_todos(
@@ -56,11 +42,16 @@ export const deleteQuery = gql`
 
 export const FetchAllTodos = gql`
 subscription FetchAllTodos {
-  todos(where: {completed: {_eq: false}}, order_by: {id: desc}) {
+  todos(
+    order_by:[
+			{completed: asc},
+      {id: desc}
+    ]) {
+    completed
     id
     todo_name
     user_id
-    completed
   }
 }
+
 `;  

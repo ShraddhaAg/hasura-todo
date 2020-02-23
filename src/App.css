@@ -36,7 +36,6 @@
 }
 
 .container {
-  overflow-y: scroll;
   overflow-x: hidden;
 }
 
@@ -78,8 +77,8 @@
 }
 
 .login-logout{
-    background-color: transparent;
-    color: white;
+  background-color: transparent;
+  color: white;
 
 }
 

@@ -12,7 +12,6 @@ class AddTodo extends Component {
   addnewTodo(addTodo, e) {
     if(e.which === 13) {
       const user_id = this.getUser();
-      console.log(user_id)
       addTodo({
         variables: { 
             todo_name: e.target.value, 
@@ -21,7 +20,6 @@ class AddTodo extends Component {
       })
       .catch(function(error) {
         console.log(error);
-        // setError(error.toString());
       });
       e.target.value = "";
     }

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Todos from './components/Todos';
 import AddTodo from './components/AddTodo';
-import CompletedTodos from './components/CompletedTodos';
 import './App.css';
 
 
@@ -19,7 +18,6 @@ class Content extends Component {
           <div class="list-group list-group-flush">
             <AddTodo />
             <Todos />
-            <CompletedTodos />
           </div>
           </div>
           <div className="col-md-2"></div>

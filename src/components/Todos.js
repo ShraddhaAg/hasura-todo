@@ -18,7 +18,10 @@ const Todos = () => (
         return <h5 className="todo-list">Ace! All done! </h5>;
 
       return data.todos.map((todo) => (
-        <div key={todo.id} data-toggle="tooltip" data-placement="left" title="click to mark completed">
+        <div key={todo.id} 
+        data-toggle="tooltip" 
+        data-placement="left" 
+        title={(todo.completed) ? "Already marked completed":"Click to mark completed"}>
           <Todo data={todo} />
         </div>
       ))
